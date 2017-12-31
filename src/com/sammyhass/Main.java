@@ -3,12 +3,10 @@ import java.util.Random;
 
 
 public class Main {
-
-    public static void main(String[] args) {
+    static double calculatePi(int total) {
         int coPrime = 0;
-        int total = 10000;
-        int[] factors1 = new int[total/2];
-        int[] factors2 = new int[total/2];
+        int[] factors1 = new int[(int) total/2];
+        int[] factors2 = new int[(int) total/2];
         int counter = 0;
         for (int i = 0; i < total+1; i++) {
             int r1 = new Random().nextInt(total) + 5;
@@ -44,9 +42,13 @@ public class Main {
             factors2 = new int[500];
         }
         double doubleCo = (double) coPrime/total;
-        System.out.println(Math.sqrt(6/doubleCo));
-
-
+        return Math.sqrt(6/doubleCo);
     }
+
+    public static void main(String[] args) {
+        System.out.println(calculatePi(1000000));
+    }
+
+
 }
 
