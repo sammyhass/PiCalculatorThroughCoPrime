@@ -3,8 +3,10 @@ import java.util.Random;
 
 
 public class Main {
-    static double calculatePi(int total) {
+
+    public static void main(String[] args) {
         int coPrime = 0;
+        int total = 100000;
         int[] factors1 = new int[(int) total/2];
         int[] factors2 = new int[(int) total/2];
         int counter = 0;
@@ -42,13 +44,9 @@ public class Main {
             factors2 = new int[500];
         }
         double doubleCo = (double) coPrime/total;
-        return Math.sqrt(6/doubleCo);
+        System.out.println(Math.sqrt(6/doubleCo));
+
+
     }
-
-    public static void main(String[] args) {
-        System.out.println(calculatePi(1000000));
-    }
-
-
 }
 
